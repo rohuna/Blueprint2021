@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 export function test()
-{
+{ 
     return "hi"
 }
 async function getFaceDetectionBoundries(imageURL)
