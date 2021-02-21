@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 10%;
+    background-color: #011936;
+    color: white;
+}
+
+.home-link{
+    color: white;
+    text-decoration: none;
+}
+
+.home-link:visited {
+    color: white;
+    text-decoration: none;
+}

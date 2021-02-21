@@ -7,10 +7,10 @@ class Navbar extends Component {
 
     render() {
         return (
-            <nav>
-                <h1>Project Name</h1>
-                <button className = "btn btn-primary">Report a missing person</button>
-            </nav>
+            <div className='nav'>
+                <h1><a href='https://google.com' className='home-link'>Find em</a></h1>
+                <button className="btn btn-primary nav-button">Help find a missing person</button>
+            </div>
         )
 
     }

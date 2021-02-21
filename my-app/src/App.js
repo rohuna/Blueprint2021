@@ -3,7 +3,8 @@
 import './App.css';
 import {addNewDoc, initAdmin} from './backend/database.js';
 
-import './import.css';
+
+import {test} from './backend/facemethods.js'
 import Navbar from './Navbar'
 import firebase from "firebase"
 const config = {
@@ -21,13 +22,15 @@ const db = firebase.firestore();
 
 
 
+
 function App() {
 
   testBackend();
   
   return (
-    <div className="App">
-      <Navbar />
+    <div className='App'>
+      <Navbar/>
+      <h1>{test()}</h1>
     </div>
   );
 }

@@ -1,26 +1,18 @@
+var admin = require('firebase-admin');
 
-export let initAdmin = () =>
-{
-  
-  // const docRef = db.collection('users').doc('alovelace');
-  
-  // docRef.set({
-  //   first: 'Ada',
-  //   last: 'Lovelace',
-  //   born: 1815
-  // });
-  
-}
+var serviceAccount = require("my-app/facematch-6e6ff-firebase-adminsdk-cc3yf-160548092f.json");
 
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: 'https://facematch-6e6ff.firebaseio.com'
+});
 
-export let addNewDoc = (db, collection, data) =>
-{
+const db = admin.firestore();
 
-  const docRef = db.collection(collection).doc();
-  
-  docRef.set({
-    first: 'Ada',
-    last: 'Lovelace',
-    born: 1815
-  });
-}
+const docRef = db.collection('users').doc('alovelace');
+
+await docRef.set({
+  first: 'Ada',
+  last: 'Lovelace',
+  born: 1815
+});
