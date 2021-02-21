@@ -1,24 +1,26 @@
-// var admin = require('firebase-admin');
 
-// var serviceAccount = require("../facematch-6e6ff-firebase-adminsdk-cc3yf-160548092f.json");
+export let initAdmin = () =>
+{
+  
+  // const docRef = db.collection('users').doc('alovelace');
+  
+  // docRef.set({
+  //   first: 'Ada',
+  //   last: 'Lovelace',
+  //   born: 1815
+  // });
+  
+}
 
-// admin.initializeApp({
-//   credential: admin.credential.cert(serviceAccount),
-//   databaseURL: 'https://facematch-6e6ff.firebaseio.com'
-// });
 
-// const db = admin.firestore();
+export let addNewDoc = (db, collection, data) =>
+{
 
-// export async function initAdmin()
-// {
+  const docRef = db.collection(collection).doc();
   
-  
-//   const docRef = db.collection('users').doc('alovelace');
-  
-//   await docRef.set({
-//     first: 'Ada',
-//     last: 'Lovelace',
-//     born: 1815
-//   });
-  
-// }
+  docRef.set({
+    first: 'Ada',
+    last: 'Lovelace',
+    born: 1815
+  });
+}
