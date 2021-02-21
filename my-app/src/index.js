@@ -3,14 +3,19 @@ import ReactDOM from 'react-dom';
 import './css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Router, Route} from "react-router";
 
 import './css/import.css';
 import './css/style.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <React.StrictMode>
+      <App />
+      <Router>
+        <Route path={""} component={App}/>
+        <Route path={"missinglist"} component={MissingList}/>
+      </Router>
+    </React.StrictMode>,
   document.getElementById('root')
 );
 
