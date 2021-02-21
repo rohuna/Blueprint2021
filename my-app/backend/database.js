@@ -6,3 +6,13 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: 'https://facematch-6e6ff.firebaseio.com'
 });
+
+const db = admin.firestore();
+
+const docRef = db.collection('users').doc('alovelace');
+
+await docRef.set({
+  first: 'Ada',
+  last: 'Lovelace',
+  born: 1815
+});

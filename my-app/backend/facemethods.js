@@ -1,6 +1,9 @@
 const axios = require('axios');
 
-
+export function test()
+{
+    return "hi"
+}
 async function getFaceDetectionBoundries(imageURL)
 {
   const res = await axios.post('https://rohunfacerec.cognitiveservices.azure.com/face/v1.0/detect?detectionModel=detection_02&returnFaceId=true&returnFaceLandmarks=false', { url: imageURL }, {
