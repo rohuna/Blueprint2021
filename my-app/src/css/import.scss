@@ -1,0 +1,19 @@
+@import "../../node_modules/bootstrap/scss/_functions.scss";
+@import "../../node_modules/bootstrap/scss/_variables.scss";
+@import "../../node_modules/bootstrap/scss/_mixins.scss";
+@import "../../node_modules/bootstrap/scss/_utilities.scss";
+
+@import "../../node_modules/bootstrap/scss/_buttons.scss";
+
+.btn-primary{
+    background-color: #C0DFA1;
+    color: #000000;
+    font-weight: bold;
+    border: #9FC490;
+    &:hover {
+        transform: scale(1.05);
+        transition: all .1s ease-in-out;
+        background-color: #C0DFA1;
+        color: #000000;
+    }
+}
